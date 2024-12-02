@@ -112,4 +112,30 @@
     } else {
         transactionArea.innerHTML = element2
     }
+
+    //
+    function sayHello(): void {
+        console.log("Hello")
+    }
+
+    sayHello()
+
+    const sayHelloArrow = ():void => {
+        console.log("HelloArrow")
+    }
+
+    sayHelloArrow()
+
+    const balance:number= 0 
+
+    const processTransaction = (transaction: TransactionType) : number => {
+        const newBalance = balance + transaction.amount
+        console.log(`Old balance was ${balance}. New balance is ${newBalance}`)
+        return newBalance
+    }
+
+    const loginUser = (first_user) => {
+        first_user.logged_in = true
+        transactionArea.innerHTML = `<p>Welcome ${first_user.name}`
+    }
 }

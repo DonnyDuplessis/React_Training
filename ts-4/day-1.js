@@ -42,14 +42,33 @@ var __assign = (this && this.__assign) || function () {
     // const ul = `${el1} ${el2}`
     // const element1 = `<li>${first_user.name}</li>`
     // const unorderedList = ``
-    var transactionArea = document.getElementById("users");
+    var transactionArea_1 = document.getElementById("users");
     var element1 = "<li>".concat(first_user.name, "</li>");
     var element2 = "<p>User is not logged in</p>";
     var ul = "<ul>".concat(element1, "</ul>");
     if (first_user.logged_in === true) {
-        transactionArea.innerHTML = ul;
+        transactionArea_1.innerHTML = ul;
     }
     else {
-        transactionArea.innerHTML = element2;
+        transactionArea_1.innerHTML = element2;
     }
+    //
+    function sayHello() {
+        console.log("Hello");
+    }
+    sayHello();
+    var sayHelloArrow = function () {
+        console.log("HelloArrow");
+    };
+    sayHelloArrow();
+    var balance_1 = 0;
+    var processTransaction = function (transaction) {
+        var newBalance = balance_1 + transaction.amount;
+        console.log("Old balance was ".concat(balance_1, ". New balance is ").concat(newBalance));
+        return newBalance;
+    };
+    var loginUser = function (first_user) {
+        first_user.logged_in = true;
+        transactionArea_1.innerHTML = "<p>Welcome ".concat(first_user.name);
+    };
 }

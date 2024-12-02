@@ -133,4 +133,9 @@
         console.log(`Old balance was ${balance}. New balance is ${newBalance}`)
         return newBalance
     }
+
+    const loginUser = (first_user) => {
+        first_user.logged_in = true
+        transactionArea.innerHTML = `<p>Welcome ${first_user.name}`
+    }
 }
