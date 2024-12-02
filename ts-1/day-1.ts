@@ -32,17 +32,17 @@
     //     date: new Date()
     // }
 
-    // type TransactionType = {
-    //     description?: string,
-    //     amount: number,
-    //     date: Date
-    // }
+    type TransactionType = {
+        description?: string,
+        amount: number,
+        date: Date
+    }
 
-    // const transaction1: TransactionType = {
-    //     description: 'Deposit',
-    //     amount: 2000,
-    //     date: new Date()
-    // }
+    const transaction1: TransactionType = {
+        description: 'Deposit',
+        amount: 2000,
+        date: new Date()
+    }
 
     // const transaction2: TransactionType = {
     //     description: 'Deposit',
@@ -80,5 +80,14 @@
 
     console.log("This is the first entry of user array: ", my_array[0])
     console.log("This is the name of the second entry of the user array ", my_array[1].name)
+
+
+    const user3:user = {...first_user, age: 24}
+    const {name, age, logged_in} = user3
+
+    const user4:TransactionType = {...transaction1, amount: 15}
+    const {description, amount, date} = user4
+
+    console.log(description, amount, date)
 
 }
