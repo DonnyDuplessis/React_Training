@@ -136,6 +136,6 @@
 
     const loginUser = (first_user) => {
         first_user.logged_in = true
-        transactionArea.innerHTML = `<p>Welcome ${first_user.name}`
+        transactionArea.innerHTML = `<p>Welcome ${first_user.name}</p>`
     }
 }

@@ -69,6 +69,6 @@ var __assign = (this && this.__assign) || function () {
     };
     var loginUser = function (first_user) {
         first_user.logged_in = true;
-        transactionArea_1.innerHTML = "<p>Welcome ".concat(first_user.name);
+        transactionArea_1.innerHTML = "<p>Welcome ".concat(first_user.name, "</p>");
     };
 }
