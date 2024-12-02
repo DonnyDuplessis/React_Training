@@ -90,5 +90,47 @@
 
     console.log(description, amount, date)
 
+    // const transactionArea: HTMLDivElement = document.getElementById("transactions") as HTMLDivElement
 
+    // const el1 = `<li>${transaction1.date} ${transaction1.description} ${transaction1.amount}</li>`
+    // const el2 = `<li>${transaction1.date} ${transaction1.description} ${transaction1.amount}</li>`
+
+    // const ul = `${el1} ${el2}`
+
+    // const element1 = `<li>${first_user.name}</li>`
+    // const unorderedList = ``
+
+    const transactionArea: HTMLDivElement = document.getElementById("users") as HTMLDivElement
+
+    const element1 = `<li>${first_user.name}</li>`
+    const element2 = `<p>User is not logged in</p>`
+
+    const ul = `<ul>${element1}</ul>`
+    
+    if (first_user.logged_in === true) {
+        transactionArea.innerHTML = ul
+    } else {
+        transactionArea.innerHTML = element2
+    }
+
+    //
+    function sayHello(): void {
+        console.log("Hello")
+    }
+
+    sayHello()
+
+    const sayHelloArrow = ():void => {
+        console.log("HelloArrow")
+    }
+
+    sayHelloArrow()
+
+    const balance:number= 0 
+
+    const processTransaction = (transaction: TransactionType) : number => {
+        const newBalance = balance + transaction.amount
+        console.log(`Old balance was ${balance}. New balance is ${newBalance}`)
+        return newBalance
+    }
 }
